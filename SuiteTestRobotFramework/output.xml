@@ -1,0 +1,1875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-08-25T13:56:25.009114" rpa="false" schemaversion="5">
+<suite id="s1" name="champPersonalise" source="c:\Users\Gbtech\Desktop\Session 3 (\Techniques d'automatisation 1\TP_Suite_Test_Robot\Scripts\champPersonalise.robot">
+<kw name="Login" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:29.379683" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8083/login'.</msg>
+<msg time="2024-08-25T13:56:32.194620" level="WARN">The chromedriver version (127.0.6533.99) detected in PATH at C:\Program Files\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (128.0.6613.85); currently, chromedriver 128.0.6613.84 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-25T13:56:29.365720" elapsed="6.196019"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-25T13:56:35.570715" elapsed="0.108166"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:35.694840" level="INFO">Typing text '6283658' into text field '//*[@id='username']'.</msg>
+<arg>${txt_Username}</arg>
+<arg>${vUserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:35.682872" elapsed="0.293734"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:35.986614" level="INFO">Typing text '12345678' into text field '//*[@id='password']'.</msg>
+<arg>${txt_Password}</arg>
+<arg>${vPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:35.979120" elapsed="0.207508"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:36.195682" level="INFO">Clicking element '//*[@id='login-submit']'.</msg>
+<arg>${btn_Subtmit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:36.191690" elapsed="0.312888"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_User}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:56:36.507570" elapsed="0.433202"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:36.943764" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:36.960719" level="INFO">Verifying element '//*[@id='loggedas']/a' contains exact text '6283658'.</msg>
+<arg>${lbl_User}</arg>
+<arg>${vUserName}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:56:36.943764" elapsed="0.075797"/>
+</kw>
+<arg>${vURL}/login</arg>
+<arg>${vBrowser}</arg>
+<arg>${vUserName}</arg>
+<arg>${vPassword}</arg>
+<status status="PASS" start="2024-08-25T13:56:29.341783" elapsed="7.680772"/>
+</kw>
+<test id="s1-t1" name="CT1" line="19">
+<kw name="RQ5.8">
+<kw name="Creation Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:37.076582" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:37.073589" elapsed="0.535995"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:37.619640" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:37.613574" elapsed="0.398996"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:38.019603" level="INFO">Clicking element '//div/a[@class='icon icon-add']'.</msg>
+<arg>${lnk_New_Champ_Personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:38.015563" elapsed="0.377137"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:38.406657" level="INFO">Clicking element '//*[@id='type_GroupCustomField']'.</msg>
+<arg>${btn_radio_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:38.401671" elapsed="0.147293"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:38.556932" level="INFO">Clicking element '//*[@id='content']/form/p/input'.</msg>
+<arg>${btn_Suivant}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:38.551942" elapsed="0.267285"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:38.828203" level="INFO">Clicking element '//select[@id='custom_field_field_format']/option[text()='Texte']'.</msg>
+<arg>${select_Format}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:38.824213" elapsed="0.474760"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:39.307951" level="INFO">Typing text '6283658details1' into text field '//*[@id='custom_field_name']'.</msg>
+<arg>${txt_Nom_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:39.302965" elapsed="0.267282"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:39.578244" level="INFO">Typing text 'detail1 du nouveau champ personnalise' into text field '//*[@id='custom_field_description']'.</msg>
+<arg>${txt_Description_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:39.572242" elapsed="0.311758"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:39.892976" level="INFO">Typing text '0' into text field '//*[@id='custom_field_min_length']'.</msg>
+<arg>${txt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:39.886993" elapsed="0.229387"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:40.124358" level="INFO">Typing text '250' into text field '//*[@id='custom_field_max_length']'.</msg>
+<arg>${txt_Longeur_maxi}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:40.119370" elapsed="0.212481"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:40.338832" level="INFO">Clicking element '//div[@class='splitcontentleft']/p/input[@name='commit']'.</msg>
+<arg>${Btn_Creer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:40.334842" elapsed="0.338610"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<status status="PASS" start="2024-08-25T13:56:37.060579" elapsed="3.617858"/>
+</kw>
+<kw name="Verification de la creation du champ Personnalise">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:56:40.690919" elapsed="0.194479"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:40.887393" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:40.911330" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Création effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Création effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:56:40.888390" elapsed="0.108710"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:41.004082" level="INFO">Clicking element '//a[@class='icon icon-group groups']'.</msg>
+<arg>${lnk_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:41.000091" elapsed="0.514626"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:41.521696" level="INFO">Clicking element '//a[@class='icon icon-add']'.</msg>
+<arg>${lnk_Nouveau_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:41.517708" elapsed="0.502303"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_creation_Champ}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:56:42.024002" elapsed="0.093749"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:42.119746" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:42.132712" level="INFO">Verifying element '//p/label/span[@class='field-description' and contains(text(), '6283658')]' contains exact text '6283658details1'.</msg>
+<arg>${lbl_creation_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:56:42.120742" elapsed="0.071808"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<status status="PASS" start="2024-08-25T13:56:40.683937" elapsed="1.511604"/>
+</kw>
+<kw name="Suppression Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:42.209504" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:42.204518" elapsed="0.313737"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:42.532214" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:42.523238" elapsed="0.376505"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:42.908725" level="INFO">Clicking element '//*[@id='tab-GroupCustomField']'.</msg>
+<arg>${btn_Groupes}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:42.902735" elapsed="0.202971"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:43.113687" level="INFO">Clicking element '//td/a[contains(text(), '6283658')]/../following-sibling::td/a[@data-method='delete']'.</msg>
+<arg>${lnk_Supprimer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:43.108699" elapsed="0.169547"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:43.287220" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-08-25T13:56:43.282234" elapsed="0.200463"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:56:43.485693" elapsed="0.385964"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:43.875646" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:43.885620" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Suppression effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Suppression effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:56:43.875646" elapsed="0.058844"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:56:42.198533" elapsed="1.737951"/>
+</kw>
+<arg>vtxt_Nom_Champ=6283658details1</arg>
+<arg>vtxt_Description_Champ=detail1 du nouveau champ personnalise</arg>
+<arg>vtxt_Longeur_mini=0</arg>
+<arg>vtxt_Longeur_maxi=250</arg>
+<status status="PASS" start="2024-08-25T13:56:37.048570" elapsed="6.890908"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:56:37.024548" elapsed="6.920912"/>
+</test>
+<test id="s1-t2" name="CT1" line="19">
+<kw name="RQ5.8">
+<kw name="Creation Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:44.018266" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:44.012282" elapsed="0.347587"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:44.366849" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:44.362858" elapsed="0.390956"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:44.763788" level="INFO">Clicking element '//div/a[@class='icon icon-add']'.</msg>
+<arg>${lnk_New_Champ_Personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:44.760795" elapsed="0.321140"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:45.092906" level="INFO">Clicking element '//*[@id='type_GroupCustomField']'.</msg>
+<arg>${btn_radio_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:45.084929" elapsed="0.133641"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:45.226549" level="INFO">Clicking element '//*[@id='content']/form/p/input'.</msg>
+<arg>${btn_Suivant}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:45.222562" elapsed="0.242884"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:45.474442" level="INFO">Clicking element '//select[@id='custom_field_field_format']/option[text()='Texte']'.</msg>
+<arg>${select_Format}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:45.468438" elapsed="0.202468"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:45.682865" level="INFO">Typing text '6283658details2' into text field '//*[@id='custom_field_name']'.</msg>
+<arg>${txt_Nom_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:45.674887" elapsed="0.281250"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:45.964113" level="INFO">Typing text 'detail2 du nouveau champ personnalise' into text field '//*[@id='custom_field_description']'.</msg>
+<arg>${txt_Description_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:45.959125" elapsed="0.335105"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:46.302208" level="INFO">Typing text '0' into text field '//*[@id='custom_field_min_length']'.</msg>
+<arg>${txt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:46.297221" elapsed="0.181514"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:46.486716" level="INFO">Typing text '125' into text field '//*[@id='custom_field_max_length']'.</msg>
+<arg>${txt_Longeur_maxi}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:46.481728" elapsed="0.193953"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:46.683660" level="INFO">Clicking element '//div[@class='splitcontentleft']/p/input[@name='commit']'.</msg>
+<arg>${Btn_Creer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:46.678672" elapsed="0.496186"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<status status="PASS" start="2024-08-25T13:56:44.000312" elapsed="3.175542"/>
+</kw>
+<kw name="Verification de la creation du champ Personnalise">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:56:47.187825" elapsed="0.089759"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:47.281573" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:47.294537" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Création effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Création effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:56:47.281573" elapsed="0.061006"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:47.351555" level="INFO">Clicking element '//a[@class='icon icon-group groups']'.</msg>
+<arg>${lnk_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:47.345571" elapsed="0.376512"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:47.732054" level="INFO">Clicking element '//a[@class='icon icon-add']'.</msg>
+<arg>${lnk_Nouveau_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:47.727066" elapsed="0.446016"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_creation_Champ}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:56:48.176075" elapsed="0.066821"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:48.244890" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:48.256859" level="INFO">Verifying element '//p/label/span[@class='field-description' and contains(text(), '6283658')]' contains exact text '6283658details2'.</msg>
+<arg>${lbl_creation_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:56:48.245889" elapsed="0.054854"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<status status="PASS" start="2024-08-25T13:56:47.179845" elapsed="1.123888"/>
+</kw>
+<kw name="Suppression Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:48.316699" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:48.311712" elapsed="0.306694"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:48.626384" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:48.623392" elapsed="0.524284"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:49.156652" level="INFO">Clicking element '//*[@id='tab-GroupCustomField']'.</msg>
+<arg>${btn_Groupes}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:49.152662" elapsed="0.145611"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:49.311303" level="INFO">Clicking element '//td/a[contains(text(), '6283658')]/../following-sibling::td/a[@data-method='delete']'.</msg>
+<arg>${lnk_Supprimer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:49.305796" elapsed="0.115207"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:49.425993" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-08-25T13:56:49.423994" elapsed="0.046876"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:56:49.478850" elapsed="0.323649"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:49.804494" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:49.817464" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Suppression effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Suppression effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:56:49.805491" elapsed="0.063829"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:56:48.307723" elapsed="1.564104"/>
+</kw>
+<arg>vtxt_Nom_Champ=6283658details2</arg>
+<arg>vtxt_Description_Champ=detail2 du nouveau champ personnalise</arg>
+<arg>vtxt_Longeur_mini=0</arg>
+<arg>vtxt_Longeur_maxi=125</arg>
+<status status="PASS" start="2024-08-25T13:56:43.991351" elapsed="5.882470"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:56:43.962416" elapsed="5.917391"/>
+</test>
+<test id="s1-t3" name="CT1" line="19">
+<kw name="RQ5.8">
+<kw name="Creation Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:49.941640" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:49.937652" elapsed="0.321140"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:50.272758" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:50.263779" elapsed="0.385980"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:50.658722" level="INFO">Clicking element '//div/a[@class='icon icon-add']'.</msg>
+<arg>${lnk_New_Champ_Personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:50.653735" elapsed="0.417748"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:51.077465" level="INFO">Clicking element '//*[@id='type_GroupCustomField']'.</msg>
+<arg>${btn_radio_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:51.073478" elapsed="0.128170"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:51.210624" level="INFO">Clicking element '//*[@id='content']/form/p/input'.</msg>
+<arg>${btn_Suivant}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:51.206635" elapsed="0.370352"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:51.586960" level="INFO">Clicking element '//select[@id='custom_field_field_format']/option[text()='Texte']'.</msg>
+<arg>${select_Format}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:51.581973" elapsed="0.222405"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:51.811359" level="INFO">Typing text '6283658details3' into text field '//*[@id='custom_field_name']'.</msg>
+<arg>${txt_Nom_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:51.807371" elapsed="0.283226"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:52.101570" level="INFO">Typing text 'detail3 du nouveau champ personnalise' into text field '//*[@id='custom_field_description']'.</msg>
+<arg>${txt_Description_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:52.093587" elapsed="0.325130"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:52.425700" level="INFO">Typing text '0' into text field '//*[@id='custom_field_min_length']'.</msg>
+<arg>${txt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:52.421710" elapsed="0.178524"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:52.608211" level="INFO">Typing text '150' into text field '//*[@id='custom_field_max_length']'.</msg>
+<arg>${txt_Longeur_maxi}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:52.603225" elapsed="0.212432"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:52.821644" level="INFO">Clicking element '//div[@class='splitcontentleft']/p/input[@name='commit']'.</msg>
+<arg>${Btn_Creer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:52.817652" elapsed="0.389955"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<status status="PASS" start="2024-08-25T13:56:49.925682" elapsed="3.285916"/>
+</kw>
+<kw name="Verification de la creation du champ Personnalise">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:56:53.231544" elapsed="0.335103"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:53.568642" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:53.583603" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Création effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Création effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:56:53.569639" elapsed="0.071325"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:53.648944" level="INFO">Clicking element '//a[@class='icon icon-group groups']'.</msg>
+<arg>${lnk_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:53.644954" elapsed="0.516064"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:54.170988" level="INFO">Clicking element '//a[@class='icon icon-add']'.</msg>
+<arg>${lnk_Nouveau_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:54.166998" elapsed="0.454176"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_creation_Champ}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:56:54.624164" elapsed="0.070811"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:54.696970" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:54.710932" level="INFO">Verifying element '//p/label/span[@class='field-description' and contains(text(), '6283658')]' contains exact text '6283658details3'.</msg>
+<arg>${lbl_creation_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:56:54.696970" elapsed="0.238876"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<status status="PASS" start="2024-08-25T13:56:53.216584" elapsed="1.721254"/>
+</kw>
+<kw name="Suppression Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:54.951802" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:54.947811" elapsed="0.420906"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:55.384673" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:55.372706" elapsed="0.463487"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:55.847165" level="INFO">Clicking element '//*[@id='tab-GroupCustomField']'.</msg>
+<arg>${btn_Groupes}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:55.838186" elapsed="0.163264"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:56.008430" level="INFO">Clicking element '//td/a[contains(text(), '6283658')]/../following-sibling::td/a[@data-method='delete']'.</msg>
+<arg>${lnk_Supprimer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:56.003442" elapsed="0.108068"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:56.117494" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-08-25T13:56:56.114503" elapsed="0.040962"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:56:56.166575" elapsed="0.336717"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:56.506286" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:56.517256" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Suppression effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Suppression effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:56:56.506286" elapsed="0.095742"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:56:54.942826" elapsed="1.661198"/>
+</kw>
+<arg>vtxt_Nom_Champ=6283658details3</arg>
+<arg>vtxt_Description_Champ=detail3 du nouveau champ personnalise</arg>
+<arg>vtxt_Longeur_mini=0</arg>
+<arg>vtxt_Longeur_maxi=150</arg>
+<status status="PASS" start="2024-08-25T13:56:49.914711" elapsed="6.692305"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:56:49.890775" elapsed="6.720230"/>
+</test>
+<test id="s1-t4" name="CT1" line="19">
+<kw name="RQ5.8">
+<kw name="Creation Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:56.682812" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:56.675831" elapsed="0.324835"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:57.013825" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:57.003657" elapsed="0.344015"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:57.360641" level="INFO">Clicking element '//div/a[@class='icon icon-add']'.</msg>
+<arg>${lnk_New_Champ_Personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:57.352651" elapsed="0.359229"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:57.721855" level="INFO">Clicking element '//*[@id='type_GroupCustomField']'.</msg>
+<arg>${btn_radio_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:57.715872" elapsed="0.125177"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:57.848031" level="INFO">Clicking element '//*[@id='content']/form/p/input'.</msg>
+<arg>${btn_Suivant}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:57.844045" elapsed="0.329628"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:58.181652" level="INFO">Clicking element '//select[@id='custom_field_field_format']/option[text()='Texte']'.</msg>
+<arg>${select_Format}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:58.177663" elapsed="0.186505"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:58.376133" level="INFO">Typing text '6283658details4' into text field '//*[@id='custom_field_name']'.</msg>
+<arg>${txt_Nom_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:58.367157" elapsed="0.264292"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:58.641422" level="INFO">Typing text 'detail4 du nouveau champ personnalise' into text field '//*[@id='custom_field_description']'.</msg>
+<arg>${txt_Description_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:58.635439" elapsed="0.283309"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:58.926727" level="INFO">Typing text '0' into text field '//*[@id='custom_field_min_length']'.</msg>
+<arg>${txt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:58.922736" elapsed="0.163390"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:59.094106" level="INFO">Typing text '350' into text field '//*[@id='custom_field_max_length']'.</msg>
+<arg>${txt_Longeur_maxi}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:59.089118" elapsed="0.174407"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:59.270506" level="INFO">Clicking element '//div[@class='splitcontentleft']/p/input[@name='commit']'.</msg>
+<arg>${Btn_Creer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:59.265520" elapsed="0.298269"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<status status="PASS" start="2024-08-25T13:56:56.660871" elapsed="2.905910"/>
+</kw>
+<kw name="Verification de la creation du champ Personnalise">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:56:59.579747" elapsed="0.245345"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:59.827085" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:59.843043" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Création effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Création effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:56:59.828082" elapsed="0.056849"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:56:59.891912" level="INFO">Clicking element '//a[@class='icon icon-group groups']'.</msg>
+<arg>${lnk_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:56:59.887922" elapsed="0.345157"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:00.246036" level="INFO">Clicking element '//a[@class='icon icon-add']'.</msg>
+<arg>${lnk_Nouveau_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:00.241047" elapsed="0.339839"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_creation_Champ}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:00.583878" elapsed="0.209948"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:00.795820" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:00.816763" level="INFO">Verifying element '//p/label/span[@class='field-description' and contains(text(), '6283658')]' contains exact text '6283658details4'.</msg>
+<arg>${lbl_creation_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:00.796817" elapsed="0.072807"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<status status="PASS" start="2024-08-25T13:56:59.573764" elapsed="1.297854"/>
+</kw>
+<kw name="Suppression Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:00.884582" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:00.880593" elapsed="0.312538"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:01.205101" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:01.197122" elapsed="0.382975"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:01.592064" level="INFO">Clicking element '//*[@id='tab-GroupCustomField']'.</msg>
+<arg>${btn_Groupes}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:01.587086" elapsed="0.127396"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:01.725455" level="INFO">Clicking element '//td/a[contains(text(), '6283658')]/../following-sibling::td/a[@data-method='delete']'.</msg>
+<arg>${lnk_Supprimer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:01.717477" elapsed="0.109574"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:01.834033" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-08-25T13:57:01.831041" elapsed="0.038912"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:01.876919" elapsed="0.344722"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:02.225631" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:02.238597" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Suppression effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Suppression effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:02.226629" elapsed="0.059921"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:57:00.875608" elapsed="1.413464"/>
+</kw>
+<arg>vtxt_Nom_Champ=6283658details4</arg>
+<arg>vtxt_Description_Champ=detail4 du nouveau champ personnalise</arg>
+<arg>vtxt_Longeur_mini=0</arg>
+<arg>vtxt_Longeur_maxi=350</arg>
+<status status="PASS" start="2024-08-25T13:56:56.646908" elapsed="5.645676"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:56:56.620977" elapsed="5.675596"/>
+</test>
+<test id="s1-t5" name="CT1" line="19">
+<kw name="RQ5.8">
+<kw name="Creation Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:02.361632" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:02.355570" elapsed="0.321723"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:02.690258" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:02.681282" elapsed="0.359039"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:03.047301" level="INFO">Clicking element '//div/a[@class='icon icon-add']'.</msg>
+<arg>${lnk_New_Champ_Personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:03.043316" elapsed="0.335527"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:03.389815" level="INFO">Clicking element '//*[@id='type_GroupCustomField']'.</msg>
+<arg>${btn_radio_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:03.384827" elapsed="0.114694"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:03.507500" level="INFO">Clicking element '//*[@id='content']/form/p/input'.</msg>
+<arg>${btn_Suivant}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:03.503510" elapsed="0.227392"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:03.738883" level="INFO">Clicking element '//select[@id='custom_field_field_format']/option[text()='Texte']'.</msg>
+<arg>${select_Format}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:03.734891" elapsed="0.197472"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:03.942336" level="INFO">Typing text '6283658details5' into text field '//*[@id='custom_field_name']'.</msg>
+<arg>${txt_Nom_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:03.936353" elapsed="0.278923"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:04.223253" level="INFO">Typing text 'detail5 du nouveau champ personnalise' into text field '//*[@id='custom_field_description']'.</msg>
+<arg>${txt_Description_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:04.218267" elapsed="0.302191"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:04.527440" level="INFO">Typing text '0' into text field '//*[@id='custom_field_min_length']'.</msg>
+<arg>${txt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:04.523450" elapsed="0.172541"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:04.703967" level="INFO">Typing text '200' into text field '//*[@id='custom_field_max_length']'.</msg>
+<arg>${txt_Longeur_maxi}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:04.698982" elapsed="0.206961"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:04.914919" level="INFO">Clicking element '//div[@class='splitcontentleft']/p/input[@name='commit']'.</msg>
+<arg>${Btn_Creer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:04.907936" elapsed="0.311169"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<status status="PASS" start="2024-08-25T13:57:02.345553" elapsed="2.877542"/>
+</kw>
+<kw name="Verification de la creation du champ Personnalise">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:05.236060" elapsed="0.288590"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:05.527663" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:05.543116" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Création effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Création effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:05.528641" elapsed="0.059356"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:05.595975" level="INFO">Clicking element '//a[@class='icon icon-group groups']'.</msg>
+<arg>${lnk_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:05.591986" elapsed="0.481591"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:06.103497" level="INFO">Clicking element '//a[@class='icon icon-add']'.</msg>
+<arg>${lnk_Nouveau_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:06.085546" elapsed="0.450828"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_creation_Champ}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:06.538369" elapsed="0.067331"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:06.607696" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:06.623652" level="INFO">Verifying element '//p/label/span[@class='field-description' and contains(text(), '6283658')]' contains exact text '6283658details5'.</msg>
+<arg>${lbl_creation_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:06.608693" elapsed="0.053856"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<status status="PASS" start="2024-08-25T13:57:05.226086" elapsed="1.438457"/>
+</kw>
+<kw name="Suppression Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:06.677508" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:06.673519" elapsed="0.338101"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:07.024582" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:07.020592" elapsed="0.476944"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:07.502524" level="INFO">Clicking element '//*[@id='tab-GroupCustomField']'.</msg>
+<arg>${btn_Groupes}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:07.499531" elapsed="0.132817"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:07.638329" level="INFO">Clicking element '//td/a[contains(text(), '6283658')]/../following-sibling::td/a[@data-method='delete']'.</msg>
+<arg>${lnk_Supprimer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:07.635338" elapsed="0.113696"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:07.758154" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-08-25T13:57:07.753169" elapsed="0.051861"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:07.811013" elapsed="0.367004"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:08.182001" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:08.191974" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Suppression effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Suppression effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:08.182001" elapsed="0.053855"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:57:06.668532" elapsed="1.569318"/>
+</kw>
+<arg>vtxt_Nom_Champ=6283658details5</arg>
+<arg>vtxt_Description_Champ=detail5 du nouveau champ personnalise</arg>
+<arg>vtxt_Longeur_mini=0</arg>
+<arg>vtxt_Longeur_maxi=200</arg>
+<status status="PASS" start="2024-08-25T13:57:02.334582" elapsed="5.906261"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:57:02.308540" elapsed="5.938290"/>
+</test>
+<test id="s1-t6" name="CT1" line="19">
+<kw name="RQ5.8">
+<kw name="Creation Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:08.309660" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:08.303674" elapsed="0.318149"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:08.629803" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:08.624816" elapsed="0.357045"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:08.988843" level="INFO">Clicking element '//div/a[@class='icon icon-add']'.</msg>
+<arg>${lnk_New_Champ_Personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:08.984864" elapsed="0.348036"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:09.349863" level="INFO">Clicking element '//*[@id='type_GroupCustomField']'.</msg>
+<arg>${btn_radio_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:09.336889" elapsed="0.121675"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:09.467540" level="INFO">Clicking element '//*[@id='content']/form/p/input'.</msg>
+<arg>${btn_Suivant}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:09.464548" elapsed="0.372601"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:09.859100" level="INFO">Clicking element '//select[@id='custom_field_field_format']/option[text()='Texte']'.</msg>
+<arg>${select_Format}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:09.852124" elapsed="0.112196"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:09.979291" level="INFO">Typing text '6283658details6' into text field '//*[@id='custom_field_name']'.</msg>
+<arg>${txt_Nom_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:09.969308" elapsed="0.280139"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:10.257423" level="INFO">Typing text 'detail6 du nouveau champ personnalise' into text field '//*[@id='custom_field_description']'.</msg>
+<arg>${txt_Description_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:10.252437" elapsed="0.567540"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:10.829947" level="INFO">Typing text '0' into text field '//*[@id='custom_field_min_length']'.</msg>
+<arg>${txt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:10.824962" elapsed="0.207446"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:11.040386" level="INFO">Typing text '175' into text field '//*[@id='custom_field_max_length']'.</msg>
+<arg>${txt_Longeur_maxi}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:11.035398" elapsed="0.300790"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:11.344166" level="INFO">Clicking element '//div[@class='splitcontentleft']/p/input[@name='commit']'.</msg>
+<arg>${Btn_Creer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:11.340178" elapsed="0.304272"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<status status="PASS" start="2024-08-25T13:57:08.292703" elapsed="3.353742"/>
+</kw>
+<kw name="Verification de la creation du champ Personnalise">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:11.657415" elapsed="0.243922"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:11.903332" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:11.915300" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Création effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Création effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:11.904331" elapsed="0.057968"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:11.968282" level="INFO">Clicking element '//a[@class='icon icon-group groups']'.</msg>
+<arg>${lnk_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:11.965289" elapsed="0.348327"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:12.322604" level="INFO">Clicking element '//a[@class='icon icon-add']'.</msg>
+<arg>${lnk_Nouveau_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:12.316607" elapsed="0.611825"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_creation_Champ}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:12.932422" elapsed="0.053011"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:12.987426" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:13.000391" level="INFO">Verifying element '//p/label/span[@class='field-description' and contains(text(), '6283658')]' contains exact text '6283658details6'.</msg>
+<arg>${lbl_creation_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:12.987426" elapsed="0.067820"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<status status="PASS" start="2024-08-25T13:57:11.649437" elapsed="1.407802"/>
+</kw>
+<kw name="Suppression Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:13.074197" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:13.066216" elapsed="0.340924"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:13.415118" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:13.411127" elapsed="0.437373"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:13.858453" level="INFO">Clicking element '//*[@id='tab-GroupCustomField']'.</msg>
+<arg>${btn_Groupes}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:13.852471" elapsed="0.139761"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:13.999262" level="INFO">Clicking element '//td/a[contains(text(), '6283658')]/../following-sibling::td/a[@data-method='delete']'.</msg>
+<arg>${lnk_Supprimer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:13.996219" elapsed="0.106006"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:14.108208" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-08-25T13:57:14.106212" elapsed="0.069988"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:14.178195" elapsed="0.352953"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:14.534119" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:14.546086" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Suppression effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Suppression effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:14.535128" elapsed="0.085978"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:57:13.061229" elapsed="1.562869"/>
+</kw>
+<arg>vtxt_Nom_Champ=6283658details6</arg>
+<arg>vtxt_Description_Champ=detail6 du nouveau champ personnalise</arg>
+<arg>vtxt_Longeur_mini=0</arg>
+<arg>vtxt_Longeur_maxi=175</arg>
+<status status="PASS" start="2024-08-25T13:57:08.281736" elapsed="6.344359"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:57:08.256800" elapsed="6.373282"/>
+</test>
+<test id="s1-t7" name="CT1" line="19">
+<kw name="RQ5.8">
+<kw name="Creation Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:14.691084" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:14.686061" elapsed="0.331049"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:15.025088" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:15.021099" elapsed="0.394542"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:15.425613" level="INFO">Clicking element '//div/a[@class='icon icon-add']'.</msg>
+<arg>${lnk_New_Champ_Personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:15.420630" elapsed="0.355681"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:15.786285" level="INFO">Clicking element '//*[@id='type_GroupCustomField']'.</msg>
+<arg>${btn_radio_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:15.780300" elapsed="0.128172"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:15.918448" level="INFO">Clicking element '//*[@id='content']/form/p/input'.</msg>
+<arg>${btn_Suivant}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:15.913460" elapsed="0.248847"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:16.168293" level="INFO">Clicking element '//select[@id='custom_field_field_format']/option[text()='Texte']'.</msg>
+<arg>${select_Format}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:16.165300" elapsed="0.176568"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:16.352841" level="INFO">Typing text '6283658details7' into text field '//*[@id='custom_field_name']'.</msg>
+<arg>${txt_Nom_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:16.345859" elapsed="0.370525"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:16.724891" level="INFO">Typing text 'detail7 du nouveau champ personnalise' into text field '//*[@id='custom_field_description']'.</msg>
+<arg>${txt_Description_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:16.719905" elapsed="0.296207"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:17.024089" level="INFO">Typing text '0' into text field '//*[@id='custom_field_min_length']'.</msg>
+<arg>${txt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:17.019104" elapsed="0.175423"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:17.202505" level="INFO">Typing text '155' into text field '//*[@id='custom_field_max_length']'.</msg>
+<arg>${txt_Longeur_maxi}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:17.197520" elapsed="0.184505"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:17.388009" level="INFO">Clicking element '//div[@class='splitcontentleft']/p/input[@name='commit']'.</msg>
+<arg>${Btn_Creer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:17.384020" elapsed="0.494194"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<status status="PASS" start="2024-08-25T13:57:14.673093" elapsed="3.208113"/>
+</kw>
+<kw name="Verification de la creation du champ Personnalise">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:17.891179" elapsed="0.065824"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:17.960992" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:17.972960" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Création effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Création effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:17.960992" elapsed="0.063831"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:18.033797" level="INFO">Clicking element '//a[@class='icon icon-group groups']'.</msg>
+<arg>${lnk_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:18.027813" elapsed="0.364291"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:18.402087" level="INFO">Clicking element '//a[@class='icon icon-add']'.</msg>
+<arg>${lnk_Nouveau_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:18.396094" elapsed="0.333695"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_creation_Champ}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:18.735774" elapsed="0.062772"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:18.801539" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:18.812511" level="INFO">Verifying element '//p/label/span[@class='field-description' and contains(text(), '6283658')]' contains exact text '6283658details7'.</msg>
+<arg>${lbl_creation_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:18.801539" elapsed="0.124666"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<status status="PASS" start="2024-08-25T13:57:17.885194" elapsed="1.043006"/>
+</kw>
+<kw name="Suppression Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:18.942676" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:18.938173" elapsed="0.302732"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:19.250879" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:19.246889" elapsed="0.492683"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:19.748550" level="INFO">Clicking element '//*[@id='tab-GroupCustomField']'.</msg>
+<arg>${btn_Groupes}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:19.743562" elapsed="0.123698"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:19.876246" level="INFO">Clicking element '//td/a[contains(text(), '6283658')]/../following-sibling::td/a[@data-method='delete']'.</msg>
+<arg>${lnk_Supprimer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:19.872249" elapsed="0.116686"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:19.997911" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-08-25T13:57:19.994920" elapsed="0.061852"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:20.061743" elapsed="0.346663"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:20.413394" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:20.423367" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Suppression effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Suppression effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:20.413394" elapsed="0.050872"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:57:18.933185" elapsed="1.533067"/>
+</kw>
+<arg>vtxt_Nom_Champ=6283658details7</arg>
+<arg>vtxt_Description_Champ=detail7 du nouveau champ personnalise</arg>
+<arg>vtxt_Longeur_mini=0</arg>
+<arg>vtxt_Longeur_maxi=155</arg>
+<status status="PASS" start="2024-08-25T13:57:14.663076" elapsed="5.805170"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:57:14.641096" elapsed="5.831140"/>
+</test>
+<test id="s1-t8" name="CT1" line="19">
+<kw name="RQ5.8">
+<kw name="Creation Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:20.552022" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:20.548033" elapsed="0.303190"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:20.859204" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:20.854214" elapsed="0.362581"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:21.225773" level="INFO">Clicking element '//div/a[@class='icon icon-add']'.</msg>
+<arg>${lnk_New_Champ_Personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:21.219789" elapsed="0.329438"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:21.556208" level="INFO">Clicking element '//*[@id='type_GroupCustomField']'.</msg>
+<arg>${btn_radio_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:21.552220" elapsed="0.130550"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:21.689751" level="INFO">Clicking element '//*[@id='content']/form/p/input'.</msg>
+<arg>${btn_Suivant}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:21.685762" elapsed="0.354853"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:22.049591" level="INFO">Clicking element '//select[@id='custom_field_field_format']/option[text()='Texte']'.</msg>
+<arg>${select_Format}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:22.044604" elapsed="0.171717"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:22.224297" level="INFO">Typing text '6283658details8' into text field '//*[@id='custom_field_name']'.</msg>
+<arg>${txt_Nom_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:22.219311" elapsed="0.214513"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:22.440805" level="INFO">Typing text 'detail8 du nouveau champ personnalise' into text field '//*[@id='custom_field_description']'.</msg>
+<arg>${txt_Description_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:22.435817" elapsed="0.239363"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:22.683155" level="INFO">Typing text '0' into text field '//*[@id='custom_field_min_length']'.</msg>
+<arg>${txt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:22.678181" elapsed="0.168889"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:22.855046" level="INFO">Typing text '170 ' into text field '//*[@id='custom_field_max_length']'.</msg>
+<arg>${txt_Longeur_maxi}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:22.850059" elapsed="0.182512"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:23.038555" level="INFO">Clicking element '//div[@class='splitcontentleft']/p/input[@name='commit']'.</msg>
+<arg>${Btn_Creer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:23.034565" elapsed="0.335078"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<status status="PASS" start="2024-08-25T13:57:20.536067" elapsed="2.836569"/>
+</kw>
+<kw name="Verification de la creation du champ Personnalise">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:23.383615" elapsed="0.195466"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:23.581078" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:23.593044" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Création effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Création effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:23.582073" elapsed="0.062471"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:23.650526" level="INFO">Clicking element '//a[@class='icon icon-group groups']'.</msg>
+<arg>${lnk_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:23.646537" elapsed="0.355861"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:24.012372" level="INFO">Clicking element '//a[@class='icon icon-add']'.</msg>
+<arg>${lnk_Nouveau_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:24.006388" elapsed="0.350037"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_creation_Champ}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:24.360485" elapsed="0.047946"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:24.411467" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:24.425430" level="INFO">Verifying element '//p/label/span[@class='field-description' and contains(text(), '6283658')]' contains exact text '6283658details8'.</msg>
+<arg>${lbl_creation_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:24.411467" elapsed="0.077885"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<status status="PASS" start="2024-08-25T13:57:23.376622" elapsed="1.115721"/>
+</kw>
+<kw name="Suppression Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:24.506355" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:24.502364" elapsed="0.382904"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:24.893245" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:24.889259" elapsed="0.364816"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:25.262053" level="INFO">Clicking element '//*[@id='tab-GroupCustomField']'.</msg>
+<arg>${btn_Groupes}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:25.257068" elapsed="0.122909"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:25.389951" level="INFO">Clicking element '//td/a[contains(text(), '6283658')]/../following-sibling::td/a[@data-method='delete']'.</msg>
+<arg>${lnk_Supprimer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:25.384981" elapsed="0.099982"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:25.491991" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-08-25T13:57:25.488954" elapsed="0.034038"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:25.525983" elapsed="0.461230"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:25.989206" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:26.001174" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Suppression effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Suppression effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:25.990204" elapsed="0.056736"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:57:24.496333" elapsed="1.552484"/>
+</kw>
+<arg>vtxt_Nom_Champ=6283658details8</arg>
+<arg>vtxt_Description_Champ=detail8 du nouveau champ personnalise</arg>
+<arg>vtxt_Longeur_mini=0</arg>
+<arg>vtxt_Longeur_maxi=170 </arg>
+<status status="PASS" start="2024-08-25T13:57:20.521106" elapsed="5.531687"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:57:20.486198" elapsed="5.570584"/>
+</test>
+<test id="s1-t9" name="CT1" line="19">
+<kw name="RQ5.8">
+<kw name="Creation Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:26.120725" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:26.111750" elapsed="0.367624"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:26.486355" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:26.482366" elapsed="0.501110"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:26.990456" level="INFO">Clicking element '//div/a[@class='icon icon-add']'.</msg>
+<arg>${lnk_New_Champ_Personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:26.987468" elapsed="0.350059"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:27.346506" level="INFO">Clicking element '//*[@id='type_GroupCustomField']'.</msg>
+<arg>${btn_radio_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:27.342513" elapsed="0.132647"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:27.482142" level="INFO">Clicking element '//*[@id='content']/form/p/input'.</msg>
+<arg>${btn_Suivant}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:27.478151" elapsed="0.269808"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:27.755938" level="INFO">Clicking element '//select[@id='custom_field_field_format']/option[text()='Texte']'.</msg>
+<arg>${select_Format}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:27.751949" elapsed="0.196504"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:27.957429" level="INFO">Typing text '6283658details9' into text field '//*[@id='custom_field_name']'.</msg>
+<arg>${txt_Nom_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:27.953440" elapsed="0.277451"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:28.241863" level="INFO">Typing text 'detail9 du nouveau champ personnalise' into text field '//*[@id='custom_field_description']'.</msg>
+<arg>${txt_Description_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:28.236877" elapsed="0.319144"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:28.563999" level="INFO">Typing text '0' into text field '//*[@id='custom_field_min_length']'.</msg>
+<arg>${txt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:28.559012" elapsed="0.181807"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:28.748797" level="INFO">Typing text '180' into text field '//*[@id='custom_field_max_length']'.</msg>
+<arg>${txt_Longeur_maxi}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:28.743810" elapsed="0.192171"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:28.942962" level="INFO">Clicking element '//div[@class='splitcontentleft']/p/input[@name='commit']'.</msg>
+<arg>${Btn_Creer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:28.938973" elapsed="0.403511"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<status status="PASS" start="2024-08-25T13:57:26.102743" elapsed="3.241736"/>
+</kw>
+<kw name="Verification de la creation du champ Personnalise">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:29.354489" elapsed="0.133686"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:29.490227" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:29.501217" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Création effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Création effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:29.491202" elapsed="0.077007"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:29.575233" level="INFO">Clicking element '//a[@class='icon icon-group groups']'.</msg>
+<arg>${lnk_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:29.571244" elapsed="0.400130"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:29.978355" level="INFO">Clicking element '//a[@class='icon icon-add']'.</msg>
+<arg>${lnk_Nouveau_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:29.974365" elapsed="0.403906"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_creation_Champ}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:30.382302" elapsed="0.046400"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:30.433688" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:30.444669" level="INFO">Verifying element '//p/label/span[@class='field-description' and contains(text(), '6283658')]' contains exact text '6283658details9'.</msg>
+<arg>${lbl_creation_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:30.433688" elapsed="0.088762"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<status status="PASS" start="2024-08-25T13:57:29.349465" elapsed="1.174982"/>
+</kw>
+<kw name="Suppression Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:30.536413" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:30.532424" elapsed="0.341582"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:30.879992" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:30.876001" elapsed="0.388961"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:31.271457" level="INFO">Clicking element '//*[@id='tab-GroupCustomField']'.</msg>
+<arg>${btn_Groupes}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:31.266956" elapsed="0.136150"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:31.410087" level="INFO">Clicking element '//td/a[contains(text(), '6283658')]/../following-sibling::td/a[@data-method='delete']'.</msg>
+<arg>${lnk_Supprimer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:31.406097" elapsed="0.100248"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:31.513326" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-08-25T13:57:31.509346" elapsed="0.047377"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:31.558718" elapsed="0.396966"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:31.958675" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:31.971643" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Suppression effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Suppression effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:31.958675" elapsed="0.061834"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:57:30.527438" elapsed="1.495067"/>
+</kw>
+<arg>vtxt_Nom_Champ=6283658details9</arg>
+<arg>vtxt_Description_Champ=detail9 du nouveau champ personnalise</arg>
+<arg>vtxt_Longeur_mini=0</arg>
+<arg>vtxt_Longeur_maxi=180</arg>
+<status status="PASS" start="2024-08-25T13:57:26.090774" elapsed="5.933725"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:57:26.065759" elapsed="5.965725"/>
+</test>
+<test id="s1-t10" name="CT1" line="19">
+<kw name="RQ5.8">
+<kw name="Creation Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:32.100300" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:32.095310" elapsed="0.414915"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:32.519201" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:32.514216" elapsed="0.457773"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:32.980966" level="INFO">Clicking element '//div/a[@class='icon icon-add']'.</msg>
+<arg>${lnk_New_Champ_Personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:32.974982" elapsed="0.550527"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:33.539476" level="INFO">Clicking element '//*[@id='type_GroupCustomField']'.</msg>
+<arg>${btn_radio_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:33.532490" elapsed="0.319150"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:33.857620" level="INFO">Clicking element '//*[@id='content']/form/p/input'.</msg>
+<arg>${btn_Suivant}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:33.854629" elapsed="0.457850"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:34.318465" level="INFO">Clicking element '//select[@id='custom_field_field_format']/option[text()='Texte']'.</msg>
+<arg>${select_Format}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:34.314476" elapsed="0.095743"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:34.420204" level="INFO">Typing text '6283658details10' into text field '//*[@id='custom_field_name']'.</msg>
+<arg>${txt_Nom_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:34.414208" elapsed="0.346105"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:34.768292" level="INFO">Typing text 'detail10 du nouveau champ personnalise' into text field '//*[@id='custom_field_description']'.</msg>
+<arg>${txt_Description_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:34.763306" elapsed="0.294213"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:35.065496" level="INFO">Typing text '0' into text field '//*[@id='custom_field_min_length']'.</msg>
+<arg>${txt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:35.061509" elapsed="0.173568"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:35.243056" level="INFO">Typing text '175  ' into text field '//*[@id='custom_field_max_length']'.</msg>
+<arg>${txt_Longeur_maxi}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:35.237072" elapsed="0.311167"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:35.555222" level="INFO">Clicking element '//div[@class='splitcontentleft']/p/input[@name='commit']'.</msg>
+<arg>${Btn_Creer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:35.551231" elapsed="0.289226"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<arg>${vtxt_Description_Champ}</arg>
+<arg>${vtxt_Longeur_mini}</arg>
+<arg>${vtxt_Longeur_maxi}</arg>
+<status status="PASS" start="2024-08-25T13:57:32.083343" elapsed="3.761103"/>
+</kw>
+<kw name="Verification de la creation du champ Personnalise">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:35.857413" elapsed="0.221406"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:36.081811" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:36.091785" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Création effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Création effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:36.081811" elapsed="0.058842"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:36.147635" level="INFO">Clicking element '//a[@class='icon icon-group groups']'.</msg>
+<arg>${lnk_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:36.143646" elapsed="0.363369"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:36.516037" level="INFO">Clicking element '//a[@class='icon icon-add']'.</msg>
+<arg>${lnk_Nouveau_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:36.512047" elapsed="0.369083"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_creation_Champ}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:36.884121" elapsed="0.064967"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:36.953081" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:36.967042" level="INFO">Verifying element '//p/label/span[@class='field-description' and contains(text(), '6283658')]' contains exact text '6283658details10'.</msg>
+<arg>${lbl_creation_Champ}</arg>
+<arg>${vtxt_Nom_Champ}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:36.953081" elapsed="0.064948"/>
+</kw>
+<arg>${vtxt_Nom_Champ}</arg>
+<status status="PASS" start="2024-08-25T13:57:35.848436" elapsed="1.171644"/>
+</kw>
+<kw name="Suppression Champ personnalise">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:37.033029" level="INFO">Clicking element '//a[@class='administration']'.</msg>
+<arg>${lnk_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:37.029039" elapsed="0.332028"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:37.369049" level="INFO">Clicking element '//a[@class='icon icon-custom-fields custom-fields']'.</msg>
+<arg>${lnk_Champ_personnalise}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:37.365057" elapsed="0.371950"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:37.744986" level="INFO">Clicking element '//*[@id='tab-GroupCustomField']'.</msg>
+<arg>${btn_Groupes}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:37.741012" elapsed="0.117799"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:37.865842" level="INFO">Clicking element '//td/a[contains(text(), '6283658')]/../following-sibling::td/a[@data-method='delete']'.</msg>
+<arg>${lnk_Supprimer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:37.860866" elapsed="0.120864"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:37.991704" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-08-25T13:57:37.985720" elapsed="0.045004"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${lbl_Message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-25T13:57:38.033718" elapsed="0.374683"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:38.410440" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:38.422444" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Suppression effectuée avec succès.'.</msg>
+<arg>${lbl_Message}</arg>
+<arg>Suppression effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-08-25T13:57:38.411438" elapsed="0.066019"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:57:37.024051" elapsed="1.456398"/>
+</kw>
+<arg>vtxt_Nom_Champ=6283658details10</arg>
+<arg>vtxt_Description_Champ=detail10 du nouveau champ personnalise</arg>
+<arg>vtxt_Longeur_mini=0</arg>
+<arg>vtxt_Longeur_maxi=175  </arg>
+<status status="PASS" start="2024-08-25T13:57:32.070377" elapsed="6.412068"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:57:32.042451" elapsed="6.443994"/>
+</test>
+<kw name="Logout" owner="keyword" type="TEARDOWN">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-25T13:57:38.508437" level="INFO">Clicking element '//a[@data-method='post']'.</msg>
+<arg>${lnk_Deconnexion}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-25T13:57:38.503447" elapsed="0.396955"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-25T13:57:38.903395" elapsed="2.987053"/>
+</kw>
+<status status="PASS" start="2024-08-25T13:57:38.498460" elapsed="3.393982"/>
+</kw>
+<doc>Suite de test pour le champ personnalise d'un groupe</doc>
+<status status="PASS" start="2024-08-25T13:56:25.078866" elapsed="76.815571"/>
+</suite>
+<statistics>
+<total>
+<stat pass="10" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="10" fail="0" skip="0" id="s1" name="champPersonalise">champPersonalise</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-08-25T13:56:32.194620" level="WARN">The chromedriver version (127.0.6533.99) detected in PATH at C:\Program Files\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (128.0.6613.85); currently, chromedriver 128.0.6613.84 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-08-25T13:56:36.943764" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:40.887393" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:42.119746" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:43.875646" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:43.960421" level="WARN">Multiple tests with name 'CT1' executed in suite 'champPersonalise'.</msg>
+<msg time="2024-08-25T13:56:47.281573" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:48.244890" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:49.804494" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:49.887784" level="WARN">Multiple tests with name 'CT1' executed in suite 'champPersonalise'.</msg>
+<msg time="2024-08-25T13:56:53.568642" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:54.696970" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:56.506286" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:56:56.617987" level="WARN">Multiple tests with name 'CT1' executed in suite 'champPersonalise'.</msg>
+<msg time="2024-08-25T13:56:59.827085" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:00.795820" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:02.225631" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:02.305548" level="WARN">Multiple tests with name 'CT1' executed in suite 'champPersonalise'.</msg>
+<msg time="2024-08-25T13:57:05.527663" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:06.607696" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:08.182001" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:08.254807" level="WARN">Multiple tests with name 'CT1' executed in suite 'champPersonalise'.</msg>
+<msg time="2024-08-25T13:57:11.903332" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:12.987426" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:14.534119" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:14.638587" level="WARN">Multiple tests with name 'CT1' executed in suite 'champPersonalise'.</msg>
+<msg time="2024-08-25T13:57:17.960992" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:18.801539" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:20.413394" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:20.483207" level="WARN">Multiple tests with name 'CT1' executed in suite 'champPersonalise'.</msg>
+<msg time="2024-08-25T13:57:23.581078" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:24.411467" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:25.989206" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:26.063764" level="WARN">Multiple tests with name 'CT1' executed in suite 'champPersonalise'.</msg>
+<msg time="2024-08-25T13:57:29.490227" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:30.433688" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:31.958675" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:32.040457" level="WARN">Multiple tests with name 'CT1' executed in suite 'champPersonalise'.</msg>
+<msg time="2024-08-25T13:57:36.081811" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:36.953081" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-08-25T13:57:38.410440" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+</errors>
+</robot>

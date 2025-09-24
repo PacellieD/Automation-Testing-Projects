@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-10-28T15:08:37 EDT" name="Default Suite" finished-at="2024-10-28T15:09:13 EDT" duration-ms="35432">
+    <groups>
+    </groups>
+    <test started-at="2024-10-28T15:08:37 EDT" name="Projet_TP1" finished-at="2024-10-28T15:09:13 EDT" duration-ms="35432">
+      <class name="ModificationForum">
+        <test-method is-config="true" signature="SetUpBeforeClass()[pri:0, instance:ModificationForum@6193932a]" started-at="2024-10-28T15:08:38 EDT" name="SetUpBeforeClass" finished-at="2024-10-28T15:08:44 EDT" duration-ms="6326" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUpBeforeClass -->
+        <test-method signature="testModificationForum()[pri:0, instance:ModificationForum@6193932a]" started-at="2024-10-28T15:08:44 EDT" name="testModificationForum" finished-at="2024-10-28T15:09:11 EDT" duration-ms="27230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testModificationForum -->
+        <test-method is-config="true" signature="tearDownAfterClass()[pri:0, instance:ModificationForum@6193932a]" started-at="2024-10-28T15:09:11 EDT" name="tearDownAfterClass" finished-at="2024-10-28T15:09:13 EDT" duration-ms="1742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterClass -->
+      </class> <!-- ModificationForum -->
+    </test> <!-- Projet_TP1 -->
+  </suite> <!-- Default Suite -->
+</testng-results>

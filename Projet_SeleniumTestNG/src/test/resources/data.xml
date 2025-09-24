@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <row>
+        <Projet>projetpacellie</Projet>
+        <NomForum>Forum1</NomForum>
+        <Description>Premier forum de ce forum principal.</Description>
+    </row>
+    <row>
+        <Projet>projetpacellie</Projet>
+        <NomForum>Forum2</NomForum>
+        <Description>Deuxième forum dédié aux discussions générales.</Description>
+    </row>
+    <row>
+        <Projet>projetpacellie</Projet>
+        <NomForum>Forum3</NomForum>
+        <Description>Forum pour le partage de ressources et de documents.</Description>
+    </row>
+    <row>
+        <Projet>projetpacellie</Projet>
+        <NomForum>Forum4</NomForum>
+        <Description>Forum de retour d'expérience et d'évaluation.</Description>
+    </row>
+    <row>
+        <Projet>projetpacellie</Projet>
+        <NomForum>Forum5</NomForum>
+        <Description>Forum pour les suggestions et les idées d'amélioration.</Description>
+    </row>
+</root>
+
